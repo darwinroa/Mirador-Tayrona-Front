@@ -12,28 +12,28 @@ export const RESET = "RESET";
 
 export const getAllRooms = () => {
   return async function (dispatch) {
-    const rooms = await axios.get("/room");
+    const rooms = await axios.get("https://backend-del-hotel-production-c60b.up.railway.app/room");
     dispatch({ type: GET_ALL_ROOMS, payload: rooms.data });
   };
 };
 
 export const getTransporte = () => {
   return async function (dispatch) {
-    const transporte = await axios.get("/transporte");
+    const transporte = await axios.get("https://backend-del-hotel-production-c60b.up.railway.app/transporte");
     dispatch({ type: GET_TRANSPORTE, payload: transporte.data });
   };
 };
 
 export const getDesayuno = () => {
   return async function (dispatch) {
-    const desayuno = await axios.get("/desayuno");
+    const desayuno = await axios.get("https://backend-del-hotel-production-c60b.up.railway.app/desayuno");
     dispatch({ type: GET_DESAYUNO, payload: desayuno.data });
   };
 };
 
 export const getComidas = () => {
   return async function (dispatch) {
-    const comidas = await axios.get("/comidas");
+    const comidas = await axios.get("https://backend-del-hotel-production-c60b.up.railway.app/comidas");
     dispatch({ type: GET_COMIDAS, payload: comidas.data });
   };
 };
